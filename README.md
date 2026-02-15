@@ -1,8 +1,8 @@
-Cyber Bully Detection System
+# Cyber Bully Detection System
 
 DistilBERT + Logistic Regression Fallback
 
-🔍 Overview
+## Overview
 
 This project is a real-time cyberbullying detection web application built using:
 
@@ -24,8 +24,8 @@ safe
 
 It combines deep learning with rule-based escalation to reduce false negatives.
 
-🧠 Model Architecture
-1️⃣ Primary Model
+## Model Architecture
+### 1️ Primary Model
 
 Fine-tuned DistilBERT (Hugging Face Transformers)
 
@@ -37,7 +37,7 @@ Confidence-based thresholding
 
 Runs on CPU/GPU
 
-2️⃣ Fallback Model
+### 2 Fallback Model
 
 TF-IDF + Logistic Regression (scikit-learn)
 
@@ -47,7 +47,7 @@ DistilBERT fails to load
 
 Or inference errors occur
 
-3️⃣ Advisory Layer (High Precision Rules)
+### 3️ Advisory Layer (High Precision Rules)
 
 Certain patterns are immediately escalated:
 
@@ -59,7 +59,7 @@ Explicit hate speech indicators
 
 This prevents low-confidence misses.
 
-🖥 Web Application
+## Web Application
 
 Built with:
 
@@ -81,32 +81,15 @@ Statistics dashboard
 
 REST API endpoint (/api/analyze)
 
-📁 Project Structure
-cyber_pj/
-│
-├── src/
-│   ├── app.py
-│   └── utils.py
-│
-├── templates/
-├── static/
-├── models/
-│   ├── distilbert/
-│   └── model_fallback.joblib
-│
-├── requirements.txt
-├── README.md
-└── .gitignore
-
-⚙️ Installation (Local Setup)
-1️⃣ Create virtual environment
+## Installation (Local Setup)
+### 1️ Create virtual environment
 python -m venv venv
 venv\Scripts\activate
 
-2️⃣ Install dependencies
+### 2️ Install dependencies
 pip install -r requirements.txt
 
-3️⃣ Run application
+### 3️ Run application
 python src/app.py
 
 
@@ -114,7 +97,7 @@ Open:
 
 http://127.0.0.1:7860
 
-🐳 Docker Deployment (Optional)
+## Docker Deployment (Optional)
 
 Build image:
 
@@ -125,18 +108,18 @@ Run container:
 
 docker run -p 7860:7860 cyber-bully-detector
 
-🌐 Hugging Face Deployment
+## Hugging Face Deployment
 
 Live Demo:
-👉 [YOUR_HUGGINGFACE_LINK_HERE]
+ [YOUR_HUGGINGFACE_LINK_HERE]
 
-📊 Example Predictions
+## Example Predictions
 Input	Prediction
 I love my family	SAFE
 You idiot	OFFENSIVE
 You filthy nigger	HATE_SPEECH
 I will kill you	HATE_SPEECH
-🛡 Safety Design Philosophy
+Safety Design Philosophy
 
 This system prioritizes:
 
@@ -148,19 +131,7 @@ Confidence threshold control
 
 Hybrid ML + rule-based detection
 
-🚀 Future Improvements
-
-Better contextual bias detection
-
-Multi-language support
-
-Adversarial robustness testing
-
-Model quantization for faster inference
-
-Confidence calibration tuning
-
-📌 Technologies Used
+## Technologies Used
 
 Python 3.10
 
@@ -175,7 +146,3 @@ Flask
 SQLite
 
 Gunicorn
-
-📄 License
-
-This project is for educational and research purposes.
