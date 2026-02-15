@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Statistics — Cyber Bully Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Detection Statistics</h1><br>
+      <a href="{{ url_for('index') }}" class="btn secondary">⬅ Back</a>
+    </header>
+
+    <main>
+      <table class="stats-table">
+        <thead>
+          <tr><th>Label</th><th>Count</th></tr>
+        </thead>
+        <tbody>
+          {% for label, cnt in counts.items() %}
+          <tr>
+            <td><span class="badge {{ label }}">{{ label|upper }}</span></td>
+            <td>{{ cnt }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </main>
+  </div>
+</body>
+</html>

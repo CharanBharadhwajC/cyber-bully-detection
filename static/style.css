@@ -1,0 +1,100 @@
+body {
+  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #dbeafe, #fef3c7);
+  color: #1e293b;
+}
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  padding: 30px;
+}
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #0f172a;
+}
+.subtitle {
+  color: #64748b;
+  margin: 4px 0 16px;
+}
+footer {
+  margin-top: 20px;
+  font-size: 13px;
+  text-align: center;
+  color: #64748b;
+}
+
+/* Form */
+textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  font-size: 15px;
+  resize: vertical;
+}
+.form-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn.primary { background: #2563eb; color: #fff; }
+.btn.primary:hover { background: #1d4ed8; }
+.btn.secondary { background: #475569; color: #fff; }
+.btn.secondary:hover { background: #334155; }
+
+/* Result Card */
+.result-card {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+.result-card.safe { background: #ecfdf5; border-color: #34d399; }
+.result-card.offensive { background: #fef2f2; border-color: #f87171; }
+.result-card.hate_speech { background: #fef3c7; border-color: #fbbf24; }
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.badge.safe { background: #10b981; color: #fff; }
+.badge.offensive { background: #ef4444; color: #fff; }
+.badge.hate_speech { background: #f59e0b; color: #fff; }
+
+.confidence, .rationale, .model-used {
+  margin: 6px 0;
+  color: #475569;
+  font-size: 14px;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+}
+th, td {
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  font-size: 14px;
+}
+td.msg { text-align: left; }

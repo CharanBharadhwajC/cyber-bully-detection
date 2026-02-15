@@ -1,0 +1,33 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
+*.log
+
+# Virtual env
+venv/
+.env
+
+# Git
+.git/
+.gitignore
+
+# Notebooks
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large training artifacts (keep only what you really need)
+*.csv
+*.ipynb
+
+# If models are VERY large and you don't need all of them:
+# Uncomment selectively if needed
+# models/*.pt
+# models/*.bin
+# models/*.safetensors

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Admin — Cyber Bully Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Admin Panel — Flagged Messages</h1><br>
+      <a href="{{ url_for('index') }}" class="btn secondary">⬅ Back</a>
+    </header>
+
+    <main>
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>ID</th><th>Time</th><th>Model</th><th>Label</th><th>Confidence</th><th>Message</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for r in rows %}
+          <tr>
+            <td>{{ r['id'] }}</td>
+            <td>{{ r['created_at'] }}</td>
+            <td>{{ r['model'] }}</td>
+            <td><span class="badge {{ r['label'] }}">{{ r['label']|upper }}</span></td>
+            <td>{{ "%.1f"|format(r['confidence'] * 100) }}%</td>
+            <td class="msg">{{ r['message'] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Compiled extensions
+*.so
+*.dll
+
+# -----------------------------
+# Virtual Environment
+# -----------------------------
+venv/
+.env/
+.env
+*.env
+
+# -----------------------------
+# Logs & Runtime
+# -----------------------------
+*.log
+*.db
+*.sqlite3
+
+# Flask session cache
+instance/
+
+# -----------------------------
+# Jupyter / Training
+# -----------------------------
+.ipynb_checkpoints/
+*.ipynb
+*.csv
+*.tsv
+
+# -----------------------------
+# OS Files
+# -----------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# -----------------------------
+# IDE
+# -----------------------------
+.vscode/
+.idea/
+
+# -----------------------------
+# PyTorch & Model Artifacts
+# -----------------------------
+
+# Do NOT version huge training checkpoints
+*.pt
+*.pth
+*.ckpt
+*.bin
+
+# If using HF format and large:
+models/**/*.safetensors
+models/**/*.bin
+
+# Keep ONLY the final production model folder if needed
+# If you want to track only models/distilbert folder:
+# !models/distilbert/
+# !models/distilbert/config.json
+# !models/distilbert/tokenizer.json
+# !models/distilbert/tokenizer_config.json
+# !models/distilbert/model.safetensors
+
+# -----------------------------
+# Docker
+# -----------------------------
+docker_data.vhdx
+
+# -----------------------------
+# Temporary files
+# -----------------------------
+*.tmp
+*.temp
