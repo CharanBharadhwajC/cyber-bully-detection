@@ -111,7 +111,7 @@ docker run -p 7860:7860 cyber-bully-detector
 ## Hugging Face Deployment
 
 Live Demo:
- [YOUR_HUGGINGFACE_LINK_HERE]
+https://huggingface.co/spaces/CharanBharadhwaj/cyber-bully-detector
 
 ## Example Predictions
 Input	Prediction
